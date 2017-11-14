@@ -1,0 +1,37 @@
+{
+  "name": "bookstory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@storybook/addon-knobs": "^3.2.15",
+    "css-loader": "^0.28.7",
+    "node-sass": "^4.6.1",
+    "prismjs": "^1.8.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "vue": "^2.5.3",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.15",
+    "@storybook/addon-centered": "^3.2.15",
+    "@storybook/addon-links": "^3.2.15",
+    "@storybook/vue": "^3.2.15",
+    "babel-preset-vue": "^1.2.1",
+    "cross-env": "^5.0.1",
+    "storybook-addon-jsx": "^5.0.0"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "deploy-storybook": "storybook-to-ghpages"
+  },
+  "author": "",
+  "license": "ISC"
+}
