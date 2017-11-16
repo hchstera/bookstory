@@ -3,6 +3,7 @@
       <h4 class="h4-regular-regular">How To Use</h4>
       <pre class="language-html"><code v-html="syntaxHtml"></code></pre>
       <h4 class="h4-regular-regular">Result Html</h4>
+      <div><button @click="freshResultHtml">Refresh Html</button></div>
       <pre class="language-html"><code v-html="resultHtml"></code></pre>
       <h4 class="h4-regular-regular">Result Demo</h4>
       <div ref="result">
@@ -32,10 +33,13 @@
 		methods: {
 		    highlight(syntax) {
 		        return this.prism.highlight(syntax, this.prism.languages.html);
+            },
+            freshResultHtml() {
+                this.resultHtml = this.highlight(beautify_html(this.$refs.result.innerHTML));
             }
 		},
         mounted() {
-	        this.resultHtml = this.highlight(this.$refs.result.innerHTML);
+	        this.freshResultHtml();
         }
 	}
 </script>
