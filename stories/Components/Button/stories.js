@@ -79,8 +79,8 @@ stories.add('Outline Style', () => ({
         <syntax-container :syntax="syntax">
             <outline-button @click="action" :category="category" :active="active" :extend="extend" :type="type" :size="size" :text="text" :disabled="disabled"></outline-button>
         </syntax-container>
-        <h3 class="h3-regular-regular">Static (Default Mode)</h3>
         <hr>
+        <h3 class="h3-regular-regular">Static (Default Mode)</h3>
         <syntax-container :syntax="'<outline-button></outline-button>'">
             <outline-button></outline-button>
         </syntax-container>

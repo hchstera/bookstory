@@ -17,7 +17,7 @@ stories.add('Blocking Style', () => ({
     </div>`,
     computed: {
         syntax() {
-            return `<pagination @change-page="action"></pagination>`;
+            return `<pagination @change-page="action" :counts="${this.counts}"></pagination>`;
         },
         counts() {
             let options = {
